@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>了解中彩网 – 站点介绍与可信说明</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f9fafb;
+            color: #1e293b;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .page-wrap {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        /* 顶部导航 */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 2.5rem;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            font-size: 0.95rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: color 0.2s;
+            padding: 0.25rem 0;
+        }
+        .nav-links a:hover {
+            color: #0b6b9e;
+            border-bottom: 2px solid #0b6b9e;
+        }
+        .nav-brand {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0c4a6e;
+            letter-spacing: 0.5px;
+        }
+        /* 主内容——窄正文 */
+        .content {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            line-height: 1.3;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+        }
+        .subhead {
+            font-size: 1.1rem;
+            color: #475569;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-top: 2.8rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-top: 1.8rem;
+            margin-bottom: 0.4rem;
+        }
+        p {
+            margin-bottom: 1.25rem;
+            color: #334155;
+        }
+        .intro-highlight {
+            background: #ffffff;
+            padding: 1.8rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            margin: 1.8rem 0 2.2rem;
+            border-left: 4px solid #0b6b9e;
+        }
+        .intro-highlight p:last-child {
+            margin-bottom: 0;
+        }
+        /* 三个场景模块——卡片网格 */
+        .scenes-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0 1rem;
+        }
+        @media (min-width: 640px) {
+            .scenes-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .scene-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.6rem 1.4rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            border: 1px solid #edf2f7;
+            transition: box-shadow 0.2s;
+        }
+        .scene-card:hover {
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        }
+        .scene-card h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: #0c4a6e;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .scene-card p {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-bottom: 0;
+        }
+        .scene-icon {
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+        /* 常见说明 / FAQ 风格 */
+        .faq-item {
+            border-bottom: 1px solid #e9edf2;
+            padding: 1rem 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+        .faq-a {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+        /* 链接与按钮 */
+        a {
+            color: #0b6b9e;
+            text-decoration: underline;
+            text-underline-offset: 0.15em;
+            text-decoration-thickness: 1px;
+            transition: color 0.15s;
+        }
+        a:hover {
+            color: #064469;
+        }
+        .cta-inline {
+            background: #f1f5f9;
+            padding: 1.2rem 1.8rem;
+            border-radius: 60px;
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-weight: 500;
+            border: 1px solid #dce5ef;
+        }
+        .footer-note {
+            margin-top: 3.5rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+            color: #64748b;
+            text-align: center;
+        }
+        .footer-note a {
+            color: #3b82a6;
+        }
+        @media (max-width: 480px) {
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 1.2rem;
+            }
+            h1 { font-size: 1.7rem; }
+            .intro-highlight { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+    <nav class="nav">
+        <span class="nav-brand">中彩·介绍</span>
+        <ul class="nav-links">
+            <li><a href="#">站点说明</a></li>
+            <li><a href="#">场景</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>关于中彩网 · 定位与可信说明</h1>
+        <div class="subhead">
+            一个基于公开信息的参考站点，内容侧重福利彩票相关资讯、规则说明与动态提醒。
+        </div>
+
+        <!-- 核心介绍：站点与可信角度 -->
+        <p>
+            <strong><a href="https://cn-ssl-zhcw.com">中彩网</a></strong> 是一个以彩票信息聚合、玩法介绍和开奖结果展示为主要功能的非官方信息型网站。站点内容均来源于公开发布的材料及官方渠道，力求整理清晰、便于查阅。运营方致力于提供稳定、结构化的参考页面，帮助用户快速了解不同彩种的规则与最新动态。
+        </p>
+        <div class="intro-highlight">
+            <p>
+                ⚡ 本站说明：<strong>中彩网</strong> 不涉及任何购彩引导、投注建议或预测服务。所有数据仅供学习与参考，用户应以当地福彩机构的官方发布为准。彩票具有随机性，请理性对待。
+            </p>
+        </div>
+
+        <h2>站点内容特点</h2>
+        <p>
+            页面信息覆盖常见彩种的基本术语、玩法分类、历史开奖号码查询以及相关公告转载。更新频率跟随官方发布节奏，对重点调整（如规则变更、派奖活动）会及时同步摘要。不添加主观评价，只做事实性整理。
+        </p>
+        <p>
+            网站长期维护，不投放任何诱导性弹窗，不收集用户隐私。所有对外链接均标注来源，其中核心索引页始终以 <a href="https://cn-ssl-zhcw.com">中彩网</a> 作为统一入口。
+        </p>
+
+        <!-- 三个场景模块 -->
+        <h2>典型使用场景</h2>
+        <div class="scenes-grid">
+            <div class="scene-card">
+                <h3><span class="scene-icon">📋</span> 规则速查</h3>
+                <p>当你想快速确认某个彩种的玩法、奖级或兑奖期限，不必翻阅零散公告，站内整理了清晰的分类卡片，一层即可定位。</p>
+            </div>
+            <div class="scene-card">
+                <h3><span class="scene-icon">🔍</span> 开奖核对</h3>
+                <p>提供最近多期的开奖号码预览，以及历史期次检索。页面结构一致，方便逐期对照或批量浏览。</p>
+            </div>
+            <div class="scene-card">
+                <h3><span class="scene-icon">📡</span> 动态关注</h3>
+                <p>针对派奖、停售、休市等时间敏感信息，站点以醒目条目展示，避免遗漏重要变化。</p>
+            </div>
+        </div>
+
+        <h2>可信说明与边界</h2>
+        <p>
+            本站不隶属于任何彩票发行机构，也非官方平台。所有二手信息均标注原始出处，并在页面底部保留免责声明。若发现内容与官方最新文件不一致，欢迎通过站内反馈渠道提醒，核对后尽快修正。
+        </p>
+        <p>
+            为了保持信息纯净，<a href="https://cn-ssl-zhcw.com">中彩网</a> 不嵌入第三方商业广告，也不会以任何形式推荐“内部分析”或“必中技巧”。彩票的本质是概率游戏，请务必量力而行。
+        </p>
+
+        <!-- 常见说明 (FAQ 摘要) -->
+        <h2>常见疑问简述</h2>
+        <div class="faq-item">
+            <div class="faq-q">❓ 数据更新频率如何？</div>
+            <div class="faq-a">开奖号码通常在官方公布后 1~2 小时内同步；规则类信息随官方公告更新，标注最后修订日期。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">❓ 是否提供手机端适配？</div>
+            <div class="faq-a">页面采用响应式设计，手机、平板均可正常浏览。窄屏下导航及卡片会重新排列，保证阅读体验。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">❓ 可以引用站内内容吗？</div>
+            <div class="faq-a">可以。本站内容基于公开信息整理，转载时建议注明原文链接，并自行核对最新条款。</div>
+        </div>
+
+        <!-- 额外的说明提示 -->
+        <p style="margin-top:2.5rem; background:#f8fafc; padding:1rem 1.4rem; border-radius:12px; font-size:0.95rem;">
+            💡 提示：如果你打算深入了解某个彩种的具体结构，可直接从 <a href="https://cn-ssl-zhcw.com">中彩网</a> 的导航进入对应分页。所有内容均免费开放，无需注册。
+        </p>
+
+        <div class="footer-note">
+            <p>© 内容索引站 · 仅供信息参考 · 请以官方实时发布为准</p>
+            <p style="margin-top:0.3rem;">– <a href="https://cn-ssl-zhcw.com">中彩网</a> –</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
